@@ -1,37 +1,37 @@
-import React, { useContext } from "react";
-import { Context } from "../../main";
+import { useContext } from "react";
+import { Context } from "../../main"; // adjust path if your Context lives elsewhere
 import { Link } from "react-router-dom";
-import { FaFacebookF, FaYoutube, FaLinkedin } from "react-icons/fa";
-import { RiInstagramFill } from "react-icons/ri";
-// https://www.youtube.com/@CodeWithZeeshu
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { SiLeetcode } from "react-icons/si";
+
 const Footer = () => {
   const { isAuthorized } = useContext(Context);
+
   return (
     <footer className={isAuthorized ? "footerShow" : "footerHide"}>
-      {/* <div>&copy; All Rights Reserved By CodeWithZeeshu.</div> */}
       <div>
         <Link
-          to={"https://www.facebook.com/akshat.patidar.7792?mibextid=ZbWKwL"}
+          to="https://github.com/Anupama9721"
           target="_blank"
+          rel="noopener noreferrer"
         >
-          <FaFacebookF />
+          <FaGithub />
         </Link>
-        <Link to={"https://www.youtube.com"} target="_blank">
-          <FaYoutube />
-        </Link>
+
         <Link
-          to={
-            "https://www.linkedin.com/in/akshat-patidar-7709082aa?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
-          }
+          to="https://www.linkedin.com/in/anupama-pandey-07513a24b/"
           target="_blank"
+          rel="noopener noreferrer"
         >
           <FaLinkedin />
         </Link>
+
         <Link
-          to={"https://www.instagram.com/akshat7142?igsh=MXZ2OXoxb3FwbXdweg=="}
+          to="https://leetcode.com/u/pandeyanupama255/"
           target="_blank"
+          rel="noopener noreferrer"
         >
-          <RiInstagramFill />
+          <SiLeetcode />
         </Link>
       </div>
     </footer>
